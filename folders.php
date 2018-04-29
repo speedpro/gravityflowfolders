@@ -43,7 +43,8 @@ class Gravity_Flow_Folders_Bootstrap {
 
 		require_once( 'class-folders.php' );
 
-		gravity_flow_folders();
+		// Registers the class name with GFAddOn.
+		GFAddOn::register( 'Gravity_Flow_Folders' );
 	}
 }
 
