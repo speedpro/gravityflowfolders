@@ -1,16 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import update from 'react-addons-update';
 import shortid from 'shortid';
 
-import Repeater from './components/repeater/repeater';
-import RepeaterItem from './components/repeater/item';
-import RadioGroupField from './components/repeater/radio-group';
-import CheckboxField from './components/repeater/checkbox';
-import SelectField from './components/repeater/select';
-import TextField from './components/repeater/text';
-import TextAreaField from './components/repeater/textarea';
-
+import { Repeater, RepeaterItem, RadioGroupField, SelectField, TextField } from 'gf-repeater';
 
 class FolderSettings extends RepeaterItem {
 
@@ -51,9 +43,7 @@ class FolderSettings extends RepeaterItem {
 
 			settings = (<div className="gravityflow-folder-settings">
 				<TextField settingName="name" value={this.props.item.name} label={strings.folderName} />
-				<br />
-				Permissions<br />
-				<RadioGroupField settingName="permissions" value={this.props.item.permissions} choices={permissionsRadioChoices} horizontal={true} />
+				<RadioGroupField label={strings.permissions} settingName="permissions" value={this.props.item.permissions} choices={permissionsRadioChoices} horizontal={true} />
 				{selectUsers}
 			</div>);
 		}
@@ -91,5 +81,3 @@ jQuery(document).ready(function () {
 		document.getElementById('gravityflowfolders-folders-settings-ui')
 	);
 });
-
-

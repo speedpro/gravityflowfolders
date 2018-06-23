@@ -171,6 +171,7 @@ if ( class_exists( 'GFForms' ) ) {
 						'defaultFolderName' => __( 'New Folder', 'graviytflowfolders' ),
 						'allUsers'          => __( 'All Users', 'gravityflowfolders' ),
 						'selectUsers'       => __( 'Select Users', 'gravityflowfolders' ),
+						'permissions'       => __( 'Permissions', 'gravityflowfolders' ),
 					),
 				);
 			}
