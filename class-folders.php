@@ -646,6 +646,7 @@ if ( class_exists( 'GFForms' ) ) {
 		/**
 		 * Returns the markup for the folders shortcode detail page.
 		 *
+		 * @since 1.2 Added support for the step_status, workflow_info, and sidebar shortcode attributes.
 		 * @since 1.0
 		 *
 		 * @param $a
@@ -666,6 +667,9 @@ if ( class_exists( 'GFForms' ) ) {
 				'detail_base_url'   => add_query_arg( array( 'page' => 'gravityflow-inbox', 'view' => 'entry' ) ),
 				'check_permissions' => $check_permissions,
 				'timeline'          => $a['timeline'],
+				'step_status'       => $a['step_status'],
+				'workflow_info'     => $a['workflow_info'],
+				'sidebar'           => $a['sidebar'],
 			);
 
 			gravity_flow()->inbox_page( $args );

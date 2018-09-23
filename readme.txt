@@ -44,6 +44,9 @@ The Gravity Flow Folders Extension will work with any license of [Gravity Flow](
 
 == ChangeLog ==
 
+= 1.2-dev =
+- Fixed an issue with the shortcode where the step_status, workflow_info, and sidebar attributes are ignored when the detail page is displayed.
+
 = 1.1 =
 - Added logging statements.
 - Added support for Gravity Forms 2.3
