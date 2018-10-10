@@ -44,8 +44,11 @@ The Gravity Flow Folders Extension will work with any license of [Gravity Flow](
 
 == ChangeLog ==
 
-= 1.2-dev =
+= 1.2 =
+- Updated Members 2.0 integration to use human readable labels for the capabilities. Requires Gravity Flow 1.8.1 or greater.
 - Fixed an issue with the shortcode where the step_status, workflow_info, and sidebar attributes are ignored when the detail page is displayed.
+- Fixed an issue with the folder permissions.
+- Added CSS RTL improvements.
 
 = 1.1 =
 - Added logging statements.
