@@ -26,6 +26,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
 define( 'GRAVITY_FLOW_FOLDERS_VERSION', '1.2.1-dev' );
+define( 'GRAVITY_FLOW_FOLDERS_EDD_ITEM_ID', 3923 );
 define( 'GRAVITY_FLOW_FOLDERS_EDD_ITEM_NAME', 'Folders' );
 
 add_action( 'gravityflow_loaded', array( 'Gravity_Flow_Folders_Bootstrap', 'load' ), 1 );
@@ -45,6 +46,10 @@ class Gravity_Flow_Folders_Bootstrap {
 
 		// Registers the class name with GFAddOn.
 		GFAddOn::register( 'Gravity_Flow_Folders' );
+
+		if ( defined( 'GRAVITY_FLOW_FOLDERS_LICENSE_KEY' ) ) {
+			gravity_flow_folders()->license_key = GRAVITY_FLOW_FOLDERS_LICENSE_KEY;
+		}
 	}
 }
 
@@ -65,15 +70,19 @@ function gravityflow_folders_edd_plugin_updater() {
 
 	$gravity_flow_folders = gravity_flow_folders();
 	if ( $gravity_flow_folders ) {
-		$settings = $gravity_flow_folders->get_app_settings();
 
-		$license_key = trim( rgar( $settings, 'license_key' ) );
+		if ( defined( 'GRAVITY_FLOW_FOLDERS_LICENSE_KEY' ) ) {
+			$license_key = GRAVITY_FLOW_FOLDERS_LICENSE_KEY;
+		} else {
+			$settings = $gravity_flow_folders->get_app_settings();
+			$license_key = trim( rgar( $settings, 'license_key' ) );
+		}
 
 		$edd_updater = new Gravity_Flow_EDD_SL_Plugin_Updater( GRAVITY_FLOW_EDD_STORE_URL, __FILE__, array(
 			'version'   => GRAVITY_FLOW_FOLDERS_VERSION,
 			'license'   => $license_key,
-			'item_name' => GRAVITY_FLOW_FOLDERS_EDD_ITEM_NAME,
-			'author'    => 'Steven Henty',
+			'item_id' => GRAVITY_FLOW_FOLDERS_EDD_ITEM_ID,
+			'author'    => 'Gravity Flow',
 		) );
 	}
 
