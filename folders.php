@@ -7,6 +7,8 @@ Version: 1.3.0
 Author: Gravity Flow
 Author URI: https://gravityflow.io
 License: GPL-3.0+
+GitHub Plugin URI: speedpro/gravityflowfolders
+
 
 ------------------------------------------------------------------------
 Copyright 2015-2018 Steven Henty S.L.
