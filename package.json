@@ -1,0 +1,12 @@
+{
+  "name": "gravityflowfolders",
+  "version": "0.3.0",
+  "description": "Build script for Gravity Flow Folders.",
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-cssmin": "^0.12.2",
+    "grunt-contrib-uglify": "^3.3.0",
+    "matchdep": "^2.0.0"
+  }
+}
