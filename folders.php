@@ -80,12 +80,12 @@ function gravityflow_folders_edd_plugin_updater() {
 			$license_key = trim( rgar( $settings, 'license_key' ) );
 		}
 
-		$edd_updater = new Gravity_Flow_EDD_SL_Plugin_Updater( GRAVITY_FLOW_EDD_STORE_URL, __FILE__, array(
-			'version'   => GRAVITY_FLOW_FOLDERS_VERSION,
-			'license'   => $license_key,
-			'item_id' => GRAVITY_FLOW_FOLDERS_EDD_ITEM_ID,
-			'author'    => 'Gravity Flow',
-		) );
+		// $edd_updater = new Gravity_Flow_EDD_SL_Plugin_Updater( GRAVITY_FLOW_EDD_STORE_URL, __FILE__, array(
+		// 	'version'   => GRAVITY_FLOW_FOLDERS_VERSION,
+		// 	'license'   => $license_key,
+		// 	'item_id' => GRAVITY_FLOW_FOLDERS_EDD_ITEM_ID,
+		// 	'author'    => 'Gravity Flow',
+		// ) );
 	}
 
 }
